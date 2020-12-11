@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@master
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'mhcorsproxy'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e692d93da228437387856a3338f43243 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ec0cc64924004dbcba40f524e058398f }}
         package: ${{env.DOTNET_ROOT}}/myapp 
